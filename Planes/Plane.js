@@ -1,28 +1,42 @@
 class Plane {
+  constructor(model, maxSpeed, maxFlightDistance, maxLoadCapacity) {
+    this._model = model;
+    this._maxSpeed = maxSpeed;
+    this._maxFlightDistance = maxFlightDistance;
+    this._maxLoadCapacity = maxLoadCapacity;
+  }
 
-    constructor(model, maxSpeed, maxFlightDistance, maxLoadCapacity) {
-        this.model = model;
-        this.maxSpeed = maxSpeed;
-        this.maxFlightDistance = maxFlightDistance;
-        this.maxLoadCapacity = maxLoadCapacity;
-    }
+  get model() {
+    return this._model;
+  }
 
-    getModel() {
-        return this.model;
-    }
+  get maxSpeed() {
+    return this._maxSpeed;
+  }
 
-    getMS() {
-        return this.maxSpeed;
-    }
+  get maxFlightDistance() {
+    return this._maxFlightDistance;
+  }
 
-    Get_Max_Flight_Distance() {
-        return this.maxFlightDistance;
-    }
+  get maxLoadCapacity() {
+    return this._maxLoadCapacity;
+  }
 
-    getMinLoadCapacity() {
-     let result = this.maxLoadCapacity;
-     return result;
-    }
+  set model(modelValue) {
+    this._model = modelValue;
+  }
+
+  set maxSpeed(maxSpeedValue) {
+    this._maxSpeed = maxSpeedValue;
+  }
+
+  set maxFlightDistance(MaxFlightDistanceValue) {
+    this._maxFlightDistance = MaxFlightDistanceValue;
+  }
+
+  set maxLoadCapacity(maxLoadCapacityValue) {
+    this._maxLoadCapacity = maxLoadCapacityValue;
+  }
 }
 
 module.exports = Plane;
