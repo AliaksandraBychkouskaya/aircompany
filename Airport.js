@@ -1,8 +1,7 @@
-const PassengerPlane = require('./planes/passenger-plane');
-const MilitaryPlane = require('./planes/military-plane');
-const MILITARY_TYPE = require('./models/military-type');
-
-const ExperimentalPlane = require('./planes/experimental-plane');
+const { PassengerPlane } = require('./planes/passengerPlane');
+const { MilitaryPlane } = require('./planes/militaryPlane');
+const { ExperimentalPlane } = require('./planes/experimentalPlane');
+const { MILITARY_TYPE } = require('./models/militaryType');
 
 class Airport {
   constructor(planes) {
@@ -112,4 +111,4 @@ class Airport {
   }
 }
 
-module.exports = Airport;
+module.exports = { Airport };

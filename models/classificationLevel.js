@@ -5,4 +5,4 @@ const CLASSIFICATION_LEVEL = {
   TOP_SECRET: 'TOP_SECRET',
 };
 
-module.exports = CLASSIFICATION_LEVEL;
+module.exports = { CLASSIFICATION_LEVEL };

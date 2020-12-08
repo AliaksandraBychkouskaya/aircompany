@@ -1,4 +1,4 @@
-const Plane = require('./plane');
+const { Plane } = require('./plane.js');
 
 class PassengerPlane extends Plane {
   constructor(model, maxSpeed, maxFlightDistance, maxLoadCapacity, passengersCapacity) {
@@ -15,4 +15,4 @@ class PassengerPlane extends Plane {
   }
 }
 
-module.exports = PassengerPlane;
+module.exports = { PassengerPlane };

@@ -4,4 +4,4 @@ const MILITARY_TYPE = {
   TRANSPORT: 'TRANSPORT',
 };
 
-module.exports = MILITARY_TYPE;
+module.exports = { MILITARY_TYPE };

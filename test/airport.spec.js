@@ -1,13 +1,12 @@
 const { assert } = require('chai');
 
-const Plane = require('../planes/plane');
-const MilitaryPlane = require('../planes/military-plane');
-const PassengerPlane = require('../planes/passenger-plane');
-const Airport = require('../airport');
-const MILITARY_TYPE = require('../models/military-type');
-const ExperimentalPlane = require('../planes/experimental-plane');
-const EXPERIMENTAL_TYPE = require('../models/experimental-type');
-const CLASSIFICATION_LEVEL = require('../models/classification-level');
+const { MilitaryPlane } = require('../planes/militaryPlane');
+const { PassengerPlane } = require('../planes/passengerPlane');
+const { ExperimentalPlane } = require('../planes/experimentalPlane');
+const { Airport } = require('../airport');
+const { MILITARY_TYPE } = require('../models/militaryType');
+const { EXPERIMENTAL_TYPE } = require('../models/experimentalType');
+const { CLASSIFICATION_LEVEL } = require('../models/classificationLevel');
 
 describe('My Test', () => {
   const planes = [
@@ -30,7 +29,7 @@ describe('My Test', () => {
   ];
   const planeWithMaxPassengerCapacity = new PassengerPlane('Boeing-747', 980, 16100, 70500, 242);
 
-  it('should have military Planes with transport type', () => {
+  it('should have military planes with transport type', () => {
     const airport = new Airport(planes);
     const transportMilitaryPlanes = airport.getTransportMilitaryPlanes();
     let flag = false;
@@ -50,8 +49,7 @@ describe('My Test', () => {
     assert.isFalse(expectedPlaneWithMaxPassengersCapacity === planeWithMaxPassengerCapacity);
   });
 
-  it('test 3', () => {
-    console.log('TEST testGetPassengerPlaneWithMaxCapacity started!');
+  it('should get passenger plane with max capacity', () => {
     const airport = new Airport(planes);
     airport.sortByMaxLoadCapacity();
     const planesSortedByMaxLoadCapacity = airport.getPlanes();
@@ -67,7 +65,7 @@ describe('My Test', () => {
     assert.isTrue(nextPlaneMaxLoadCapacityIsHigherThanCurrent);
   });
 
-  it('testHasAtLeastOneBomberInMilitaryPlanes', () => {
+  it('should check if there is at least one bomber in military planes', () => {
     const airport = new Airport(planes);
     const bomberMilitaryPlanes = airport.getBomberMilitaryPlanes();
 

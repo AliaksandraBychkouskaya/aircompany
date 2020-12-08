@@ -5,4 +5,4 @@ const EXPERIMENTAL_TYPE = {
   VTOL: 'VTOL',
 };
 
-module.exports = EXPERIMENTAL_TYPE;
+module.exports = { EXPERIMENTAL_TYPE };
